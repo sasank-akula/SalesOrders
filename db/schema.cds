@@ -1,15 +1,16 @@
 namespace com.sales;
-using { cuid, managed } from '@sap/cds/common';
 
-entity SalesOrders : cuid, managed {
-    salesOrderType           : String;
-    salesOrganization        : String;
-    distributionChannel      : String;
-    division                 : String;
-    soldToParty              : String;
-    status                   : String;
-    requestedDeliveryDate    : Date;
-    purchaseOrderByCustomer  : String;
-    soError                  : String;
-    s4hanaSoNo               : String;
+
+entity SalesOrderHeader {
+  key ID                  : UUID;
+  SalesOrderType          : String;
+  SalesOrganization       : String;
+  DistributionChannel     : String;
+  Division                : String;
+  SoldToParty             : String;
+  Status                  : String;
+  RequestedDeliveryDate   : DateTime;
+  PurchaseOrderByCustomer : String;
+  SO_Error                : String;
+  S4HANA_SONo             : String;
 }

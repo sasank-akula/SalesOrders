@@ -13,15 +13,15 @@ sap.ui.define([
             const sKey = oSelectedTab.getKey();
             var aFilters = []
             if (sKey === "Created") {
-                var oFilter = new Filter("status", "Contains", "Successfully Created");
+                var oFilter = new Filter("Status", "Contains", "Successfully Created");
                 aFilters.push(oFilter);
             }
             else if (sKey === "Processed") {
-                var oFilter = new Filter("status", "Contains", "Yet to be processed");
+                var oFilter = new Filter("Status", "Contains", "Yet to be processed");
                 aFilters.push(oFilter);
             }
             else if (sKey === "Error") {
-                var oFilter = new Filter("status", "Contains", "Error");
+                var oFilter = new Filter("Status", "Contains", "Error");
                 aFilters.push(oFilter);
             }
             var oTable = this.byId("idSalesOrdersTable");
